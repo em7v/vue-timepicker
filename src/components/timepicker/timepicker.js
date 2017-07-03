@@ -54,10 +54,6 @@ export default {
     subMinute(){
       if(this.value.minutes > 0)
         this.value.minutes -= 1;
-      else {
-        this.subHour();
-        this.value.minutes = 0;
-      }
     },
     formatNumber(number){
       if (number < 10)
