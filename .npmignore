@@ -1,0 +1,14 @@
+node_modules
+.idea
+build
+config
+dist
+.babelrc
+.editorconfig
+.eslintignore
+.eslintrc.js
+.gitignore
+index.html
+yarn.lock
+src/App.vue
+src/main.js

@@ -7,16 +7,10 @@
         <div class="fridaypicker__content">
           <div class="fridaypicker__topline">
             <label @mousedown="longMouseDownStart(addHour)" @mouseup="longMouseDownStop">
-              <div class="fridaypicker__column">
-                <i class="arrow up"></i>
-              </div>
-            </label>
-            <label @mousedown="longMouseDownStart(addMinute)" @mouseup="longMouseDownStop">
-              <div class="fridaypicker__column">
-                <i class="arrow up"></i>
-              </div>
-            </label>
-          </div>
+              <div class="fridaypicker__column"><i class="arrow up"></i></div>
+            </label><label @mousedown="longMouseDownStart(addMinute)" @mouseup="longMouseDownStop">
+            <div class="fridaypicker__column"><i class="arrow up"></i></div>
+          </label></div>
           <div class="fridaypicker__middleline">
 
             <div class="fridaypicker__column">{{ formatNumber(value.hours) }}</div>
@@ -24,16 +18,19 @@
             <div class="fridaypicker__column">{{ formatNumber(value.minutes) }}</div>
           </div>
           <div class="fridaypicker_downline">
-            <div class="fridaypicker__column" @mousedown="longMouseDownStart(subHour)" @mouseup="longMouseDownStop"><i class="arrow down"></i></div>
-            <div class="fridaypicker__column" @mousedown="longMouseDownStart(subMinute)" @mouseup="longMouseDownStop"><i class="arrow down"></i></div>
+            <label @mousedown="longMouseDownStart(subHour)" @mouseup="longMouseDownStop">
+              <div class="fridaypicker__column"><i
+                class="arrow down"></i></div>
+            </label><label @mousedown="longMouseDownStart(subMinute)" @mouseup="longMouseDownStop">
+            <div class="fridaypicker__column"><i
+              class="arrow down"></i></div>
+          </label>
           </div>
         </div>
       </div>
     </template>
   </div>
 </template>
-
-<script src="./timepicker.js"></script>
 
 
 <style>
@@ -50,6 +47,6 @@
     background: #000;
   }
 </style>
-
+<script src="./timepicker.js"></script>
 <style lang="scss" src="./timepicker.scss"></style>
 
