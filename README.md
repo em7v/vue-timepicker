@@ -17,7 +17,12 @@ npm i vue-simple-timepicker --save
 ```Vue
 <template>
   <div id="app">
-      <Timepicker></Timepicker>
+      <Timepicker v-model="timepicker" :options="pickerSetting"></Timepicker>
+      
+      <!-- View time -->
+      <div>
+        {{ timepicker.hours }} : {{ timepicker.minutes }}
+      </div>
   </div>
 </template>
 
@@ -27,6 +32,38 @@ npm i vue-simple-timepicker --save
   export default {
     name: 'app',
     components: {Timepicker},
+    data() {
+        return {
+            timepicker: {
+                hours: 0,
+                minutes: 0,
+            },
+            pickerSetting: {
+              headerShow: false,
+            },
+        }
+    }
   };
 </script>
+```
+### Options
+**_Default Options:_**
+```js
+options : {
+  headerShow: true, /* Show/Hide Header  */
+  headerText: 'Friday Time Picker' /* Text Header a Picker */
+};
+```
+
+_**Usage Custom options:**_
+
+<Timepicker **_:options="pickerSetting"_**></Timepicker>
+
+To use the settings you need to send them to the component as shown above
+
+**_Custom trigger:_**
+```vue
+<Timepicker :options="pickerSetting">
+  <div>Click for show timepicker!</div>
+</Timepicker>
 ```
