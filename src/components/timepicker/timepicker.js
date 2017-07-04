@@ -1,19 +1,28 @@
+const defaultOptions = {
+  headerShow: true,
+  headerText: 'Friday Time Picker',
+};
+
 export default {
-  props: ['options'],
+  props: ['options', 'value'],
   mounted(){
+
+    if (this.$slots.default) {
+      this.$slots.default.forEach(vnode => {
+        vnode.elm.addEventListener('click', this.togglePicker, true);
+      });
+    }
     document.onclick = (e) => {
-      if (e.path[0].querySelector('#fridaypicker')) {
+      if (e.path[0].querySelector('.fridaypicker')) {
         this.togglePicker();
       }
-    }
+    };
+
+    this.config = {...defaultOptions, ...this.options}
   },
   data(){
     return {
-      value: {
-        hours: 0,
-        minutes: 0
-      },
-
+      config: null,
       isShowPicker: false,
       interval: false,
     }
@@ -52,7 +61,7 @@ export default {
       }
     },
     subMinute(){
-      if(this.value.minutes > 0)
+      if (this.value.minutes > 0)
         this.value.minutes -= 1;
     },
     formatNumber(number){

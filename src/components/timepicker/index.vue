@@ -1,9 +1,15 @@
 <template>
   <div class="main-panel-picker">
-    <input type="text" @click="togglePicker" :value="formatTime()">
+    <slot>
+      <input type="text" @click="togglePicker" :value="formatTime()">
+    </slot>
+    <!--<input type="text" @click="togglePicker" :value="formatTime()">-->
     <template v-if="isShowPicker">
-      <div class="fridaypicker" id="fridaypicker">
-        <div class="fridaypicker__title">Friday Time Picker</div>
+      <div class="fridaypicker">
+        <template v-if="config.headerShow">
+          <div class="fridaypicker__title">{{ config.headerText }}</div>
+        </template>
+
         <div class="fridaypicker__content">
 
           <div class="fridaypicker__topline">
