@@ -63,7 +63,7 @@ To use the settings you need to send them to the component as shown above
 
 **_Custom trigger:_**
 ```vue
-<Timepicker :options="pickerSetting">
+<Timepicker v-model="picker" :options="pickerSetting">
   <div>Click for show timepicker!</div>
 </Timepicker>
 ```
