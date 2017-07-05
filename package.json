@@ -1,8 +1,25 @@
 {
   "name": "vue-simple-timepicker",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "simple time picker",
-  "author": "Evgeniy Marthenov <evgeniy.marthenov@gmail.com>",
+  "homepage": "https://github.com/Friday14/vue-timepicker",
+  "bugs": {
+    "url": "https://github.com/Friday14/vue-timepicker/issues",
+    "email": "evgeniy.marthenov@gmail.com"
+  },
+  "author": {
+    "name": "Evgeniy Marthenov",
+    "url": "https://github.com/Friday14"
+  },
+  "keywords": [
+    "vue",
+    "vue-timepicker",
+    "timepicker",
+    "time",
+    "simple-timepicker",
+    "time-picker",
+    "picker"
+  ],
   "private": false,
   "scripts": {
     "dev": "node build/dev-server.js",

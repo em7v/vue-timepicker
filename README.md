@@ -10,7 +10,7 @@ Simple vue timepicker
 3. update styles
 
 ## Install
-npm i vue-simple-timepicker --save
+_npm i vue-simple-timepicker --save_
 
 ## Usage
 
