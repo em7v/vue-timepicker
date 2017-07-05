@@ -1,4 +1,6 @@
 # vue-timepicker
+[![npm](https://img.shields.io/npm/dw/vue-simple-timepicker.svg)]()
+
 Simple vue timepicker
 
 ## Screenshot
