@@ -5,8 +5,7 @@ Simple vue timepicker
 <img src="https://image.prntscr.com/image/Y0-gz4YyTiy_LfXlsAFPJw.png">
 
 ## Future
-1. Usage props for options the timepicker
-2. Switch AM/PM time
+1. Switch AM/PM time
 3. update styles
 
 ## Install
