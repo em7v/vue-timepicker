@@ -36,7 +36,6 @@
             <div class="fridaypicker__column" @mousedown="longMouseDownStart(subMinute)" @mouseup="longMouseDownStop">
               <i class="arrow down"></i>
             </div>
-            </label>
           </div>
         </div>
       </div>
